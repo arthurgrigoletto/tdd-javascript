@@ -1,0 +1,24 @@
+{
+  "name": "tdd-javascript",
+  "version": "1.0.0",
+  "description": "Curso TDD em javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurgrigoletto/tdd-javascript.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "libary"
+  ],
+  "author": "Arthur Grigoletto <arthur.grigoletto.lima@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arthurgrigoletto/tdd-javascript/issues"
+  },
+  "homepage": "https://github.com/arthurgrigoletto/tdd-javascript#readme"
+}
