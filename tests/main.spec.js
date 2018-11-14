@@ -1,28 +1,58 @@
-describe('Main', function() {
-  var arr;
-  // Roda uma vez antes do bloco
-  before(function() {});
+import { expect } from 'chai';
+import { sum, sub, mult, div} from '../src/main';
 
-  // Roda uma vez depois do bloco
-  after(function() {});
+describe('Calc', () => {
+  // smoke tests
+  describe('Smoke Tests', () => {
+    it('should exists the method `sum`', () => {
+      expect(sum).to.exist;
+      expect(sum).to.be.a('function');
+    });
 
-  // Roda todas as vezes, antes de cada bloco
-  beforeEach(function() {
-    arr = [1, 2, 3];
+    it('should exists the method `sub`', () => {
+      expect(sub).to.exist;
+      expect(sub).to.be.a('function');
+    });
+
+    it('should exists the method `mult`', () => {
+      expect(mult).to.exist;
+      expect(mult).to.be.a('function');
+    });
+
+    it('should exists the method `div`', () => {
+      expect(div).to.exist;
+      expect(div).to.be.a('function');
+    });
   });
 
-  // Roda todas as vezes, depois de cada bloco
-  afterEach(function() {});
-
-  it('should have a size of 4 when push another value to the array', function() {
-    arr.push(4);
+  describe('Sum', function() {
+    it('should return 4 when `sum(2,2)`', function() {
+      expect(sum(2, 2)).to.be.equal(4);
+    });
   });
 
-  it('should have a size of 2 when pop a value from the array', function() {
-    arr.pop();
+  describe('Sub', function() {
+    it('should return 4 when `sub(6,2)`', function() {
+      expect(sub(6, 2)).to.be.equal(4);
+    });
+    it('should return -4 when `sub(6,10)`', function() {
+      expect(sub(6, 10)).to.be.equal(-4);
+    });
   });
 
-  it('should remove 3 when use pop in the array', function() {
-    console.log(arr.pop() === 3);
+  describe('Mult', function() {
+    it('should return 4 when mult(2,2)', function() {
+      expect(mult(2, 2)).to.be.equal(4);
+    });
+  });
+
+  describe('Div', function() {
+    it('should return 2 when div(4,2)', function() {
+      expect(div(4, 2)).to.be.equal(2);
+    });
+
+    it('should return `Não é possível divisão por zero!` when divide by 0', function() {
+      expect(div(4, 0)).to.be.equal('Não é possível divisão por zero!');
+    });
   });
 });
