@@ -7,11 +7,4 @@ const FizzBuzz = (num) => {
   return num;
 };
 
-function foo() {
-  return 'bla';
-}
-function fio() {
-  return 'bla';
-}
-
 export default FizzBuzz;
